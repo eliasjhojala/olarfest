@@ -1,4 +1,4 @@
-include 'sinatra'
+require 'sinatra'
 
 get '/' do
 	"Palvelin toimii!"
