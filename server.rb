@@ -1,7 +1,9 @@
-require 'sinatra'
+require_relative 'requirements'
 
 class OlarFest < Sinatra::Base
+	register Sinatra::AssetPipeline
+	
 	get '/' do
-		"Palvelin toimii!"
+		erb :root
 	end
 end
