@@ -1,18 +1,5 @@
 @import url('https://fonts.googleapis.com/css?family=Open+Sans');
 
-html {
-  font-family: Open Sans;
-  margin: 0px;
-  padding: 0px;
-}
-
-body {
-  margin: 0px;
-  padding: 0px;
-  background-image: url(texture.jpg);
-  overflow-x: hidden;
-}
-
 .black {
   background-color: black;
 }
