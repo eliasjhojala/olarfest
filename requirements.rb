@@ -1,5 +1,5 @@
 require 'sinatra'
-require 'sinatra/asset_pipeline'
+require 'sinatra/content_for'
 require 'uglifier'
 require 'sass'
 require 'jquery'

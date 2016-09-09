@@ -1,7 +1,7 @@
 require_relative 'requirements'
 
 class OlarFest < Sinatra::Base
-	register Sinatra::AssetPipeline
+	helpers Sinatra::ContentFor
 	
 	get '/' do
 		erb :root
