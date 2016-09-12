@@ -1,9 +1,9 @@
 
 $( document ).ready(function() {
   $('video').bind("timeupdate", function() {
-      if(this.currentTime >= 11) {
-          this.pause();
-      }
+    if(this.currentTime >= 11) {
+      this.pause();
+    }
   });
   
   function playButtonLocation() {
@@ -12,7 +12,7 @@ $( document ).ready(function() {
   playButtonLocation();
   
   $(document).on('touchstart', function () {
-      $('video').get(0).play();
+    $('video').get(0).play();
   });
   
   $('video').on('play', function () {
