@@ -73,5 +73,5 @@ function setOpacity() {
     }
     return opacity;
   }
-  linkbar.css("background-color", "rgba(0,0,0,"+calculate()+")");
+  linkbar.css("background-color", "rgba(20, 64, 102, "+calculate()+")");
 }
