@@ -17,7 +17,7 @@ $( document ).ready(function() {
   });
   
   function playButtonLocation() {
-    $('.playButton').css("top", String($('#teaser').height() / 2 - 40) + "px");
+    $('.playButton').css("top", String($('#teaser').height() / 2 - 20) + "px");
   }
   playButtonLocation();
   
