@@ -9,23 +9,20 @@ $( document ).ready(function() {
   $( window ).scroll(function() {
     setOpacity();
   });
-  $('video').play();
+  //$('video').play();
   $('video').bind("timeupdate", function() {
       if(this.currentTime >= 11) {
           this.pause();
       }
   });
   
-  var body = $('document');
-  var video = $('video');
 
   var loadData = function () {
-      video.load();
-      video.play();
+      $('video').get(0).load();
+      //$('video').play();
   };
 
-  body.addEventListener('ontouchstart', loadData(), false);
-  body.addEventListener('onmousedown', loadData(), false);
+  $(document).click(loadData);
   
 });
 
