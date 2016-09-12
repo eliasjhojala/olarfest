@@ -9,18 +9,27 @@ $( document ).ready(function() {
   $( window ).scroll(function() {
     setOpacity();
   });
-  //$('video').play();
+  
   $('video').bind("timeupdate", function() {
       if(this.currentTime >= 11) {
           this.pause();
       }
   });
   
+  function playButtonLocation() {
+    $('playButton').css("top", String($('#teaser').height() / 2));
+  }
+  playButtonLocation();
+  
   $(document).on('touchstart', function () {
       $('video').get(0).play();
-      //$('video').play();
   });
   
+  $('video').on('play', function () {
+    $('.playButton').css("display", "none")
+  });
+  
+  $(window).resize(playButtonLocation);
 });
 
 function initLinkbarOpacity() {
