@@ -3,6 +3,8 @@ var topOpacity;
 var bottomOpacity;
 var linkbar, teaser;
 
+var allowVideoPlay = true;
+
 $( document ).ready(function() {
   initLinkbarOpacity();
   setOpacity();
@@ -13,16 +15,17 @@ $( document ).ready(function() {
   $('video').bind("timeupdate", function() {
     if(this.currentTime >= 11) {
       this.pause();
+      allowVideoPlay = false;
     }
   });
   
   function playButtonLocation() {
-    $('.playButton').css("top", String($('#teaser').height() / 2 - 20) + "px");
+    $('.playButton').css("top", String($('#teaser').height() / 2 - 35 + $('#linkbar').outerHeight()) + "px");
   }
   playButtonLocation();
   
-  $(document).on('touchstart', function () {
-    $('video').get(0).play();
+  $(document).on('touchstart click', function () {
+    if(allowVideoPlay) { $('video').get(0).play(); }
   });
   
   $('video').on('play', function () {

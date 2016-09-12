@@ -38,7 +38,7 @@
 .playButton {
   position: absolute;
   top: 50%;
-  left: calc(50% - 5px);
+  left: calc(50% - 13px);
 }
   
 .playButton .arrow {
@@ -50,6 +50,8 @@
   border-left:35px solid rgba(255, 255, 255, 0.8);
   
   position: absolute;
+  
+  top: 0.5px;
 }
 
 
@@ -103,6 +105,7 @@
   display: inline-block;
   vertical-align: top;
   width: 250px;
+  margin: 0 20px;
 }
 
 #rekryIcons .block img {
