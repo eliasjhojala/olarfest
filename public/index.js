@@ -15,6 +15,16 @@ $( document ).ready(function() {
           this.pause();
       }
   });
+  
+  var body = $('#body');
+  var video = $('#video');
+
+  var loadData = function () {
+      video.load();
+      video.play();
+  };
+
+  body.addEventListener('ontouchstart', loadData, false);
 });
 
 function initLinkbarOpacity() {
