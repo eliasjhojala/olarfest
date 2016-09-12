@@ -16,13 +16,10 @@ $( document ).ready(function() {
       }
   });
   
-
-  var loadData = function () {
-      $('video').get(0).load();
+  $(document).on('touchstart', function () {
+      $('video').get(0).play();
       //$('video').play();
-  };
-
-  $(document).click(loadData);
+  });
   
 });
 
