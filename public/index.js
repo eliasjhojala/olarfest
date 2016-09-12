@@ -1,56 +1,46 @@
 
-var max;
 var topOpacity;
-var when = 0;
-var bottomOpacity = 1;
-var whenDoesFadeStart;
+var bottomOpacity;
 var linkbar, teaser;
 
 $( document ).ready(function() {
   initLinkbarOpacity();
-  $('video').bind("timeupdate", function(){
+  setOpacity();
+  $( window ).scroll(function() {
+    setOpacity();
+  });
+  $('video').bind("timeupdate", function() {
       if(this.currentTime >= 11) {
           this.pause();
       }
   });
 });
 
-$( window ).scroll(function() {
-  setOpacity()
-});
-
 function initLinkbarOpacity() {
   //calcuate variables from the html/css
   linkbar = $('#linkbar');
   teaser = $('#teaser');
-  whenDoesFadeStart = (teaser.height() / 1.4);
-  max = (teaser.height() - linkbar.outerHeight()) - whenDoesFadeStart;
   topOpacity = linkbar.css("background-color");
   topOpacity = Number(topOpacity.replace(/^.*,(.+)\)/,'$1'));
+  bottomOpacity = 1;
   
   console.log(linkbar.css("background-color"));
 }
 
 function setOpacity() {
-  
-  function calculateOpacity() {
+  function calculate() {
+    var start = (teaser.height() / 1.4);
     var current = teaser.height() - $(window).scrollTop() - linkbar.outerHeight();
-    console.log(current);
-    console.log(max);
+    var max = (teaser.height() - linkbar.outerHeight()) - start;
     var opacity = 1 - (current / max * (bottomOpacity - topOpacity));
     
     if (opacity > 1) {
-      opacity = 1
+      opacity = 1;
     }
     if (opacity < topOpacity) {
-      opacity = topOpacity
+      opacity = topOpacity;
     }
-    
-    //console.log(opacity)
-    
     return opacity;
   }
-  
-  //set opacity
-  linkbar.css("background-color", "rgba(0,0,0,"+calculateOpacity()+")")
+  linkbar.css("background-color", "rgba(0,0,0,"+calculate()+")");
 }
