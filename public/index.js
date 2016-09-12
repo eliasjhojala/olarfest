@@ -25,6 +25,8 @@ $( document ).ready(function() {
   };
 
   body.addEventListener('ontouchstart', loadData, false);
+  body.addEventListener('onmousedown', loadData, false);
+  
 });
 
 function initLinkbarOpacity() {
