@@ -99,7 +99,7 @@ span {
 
 #rekryIcons .block {
   display: inline-block;
-  vertical-align: middle;
+  vertical-align: top;
 }
 
 #rekryIcons .block img {

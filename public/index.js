@@ -6,7 +6,12 @@ var bottomOpacity = 1;
 var whenDoesFadeStart;
 
 $( document ).ready(function() {
-  initLinkbarOpacity()
+  initLinkbarOpacity();
+  $('video').bind("timeupdate", function(){
+      if(this.currentTime >= 11) {
+          this.pause();
+      }
+  });
 });
 
 $( window ).scroll(function() {
