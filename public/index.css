@@ -80,6 +80,8 @@ span {
   padding: 50px;
 }
 
+
+
 #rekryTitle {
   margin-top: 70px;
   margin-bottom: 10px;
@@ -124,4 +126,44 @@ span {
   margin: 0px;
   margin-top: 4px;
   min-height: 1em;
+}
+
+@media screen and (max-width: 24cm) {
+  #description {
+    width: calc(100% - 2 * 20px);
+    margin-left: 0px;
+    margin-right: 0px;
+    padding: 20px;
+  }
+  #siteSubject {
+    width: calc(100% - 2 * 20px);
+    font-size: 40px;
+    padding: 20px;
+  }
+  #rekryTitle {
+    font-size: 30px;
+    margin-top: 30px;
+    margin-bottom: 0px;
+  }
+  #rekryIcons {
+    text-align: center;
+    margin-top: 15px;
+  }
+  #rekryIcons .block {
+    width: 110px;
+  }
+  #rekryIcons .block img {
+    width: 90px;
+    margin: 15px;
+  }
+  #rekryIcons h3 {
+    font-size: 18px;
+    letter-spacing: 0.3px;
+    margin-bottom: 0px;
+  }
+
+  #rekryIcons h5 {
+    margin-top: 4px;
+    min-height: 1em;
+  }
 }
