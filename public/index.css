@@ -31,33 +31,7 @@
   color: rgb(250, 250, 250);
 }
 
-#linkbar {
-  background-color: rgba(0, 0, 0, 0.2);
-  text-align: right;
-  padding-right: 40px;
-  padding-top: 20px;
-  padding-bottom: 20px;
-  width: 100%;
-  color: white;
-  float: right;
-  position: fixed;
-  overflow-x: hidden;
-}
 
-span {
-  margin-right: 40px;
-}
-
-#title {
-  top: 0px;
-  position: absolute;
-  font-size: 40px;
-  width: 100%;
-  text-align: left;
-  margin-left: 40px;
-  color: rgb(255, 255, 255);
-  text-shadow: 1px 1px 1px rgb(250, 250, 250);
-}
 
 /* google fonts: keyboard_arrow_down */
 
@@ -103,11 +77,11 @@ span {
   display: inline-block;
   vertical-align: top;
   width: 250px;
-  margin: 50px;
 }
 
 #rekryIcons .block img {
   width: 200px;
+  margin: 50px;
   margin-bottom: 0px;
   pointer-events: none;
   -webkit-user-select: none;  /* Chrome all / Safari all */
@@ -127,19 +101,6 @@ span {
   margin: 0px;
   margin-top: 4px;
   min-height: 1em;
-}
-
-.playButton {
-  width: 0;
-   height: 0;
-   border-top: 30px solid transparent;
-   border-bottom: 30px solid transparent;
-   
-   border-left:40px solid rgba(0, 0, 30, 0.5);
-   
-   position: absolute;
-   top: 50%;
-   left: calc(50% - 5px);
 }
 
 @media screen and (max-width: 24cm) {
