@@ -38,7 +38,7 @@ function setOpacity() {
   function calculate() {
     var start = (teaser.height() / 1.4);
     var current = teaser.height() - $(window).scrollTop() - linkbar.outerHeight();
-    var max = (teaser.height() - linkbar.outerHeight()) - start;
+    var max = teaser.height() - linkbar.outerHeight();
     var opacity = 1 - (current / max * (bottomOpacity - topOpacity));
     
     if (opacity > 1) {
