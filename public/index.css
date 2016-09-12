@@ -102,6 +102,7 @@ span {
 #rekryIcons .block {
   display: inline-block;
   vertical-align: top;
+  width: 250px;
 }
 
 #rekryIcons .block img {
