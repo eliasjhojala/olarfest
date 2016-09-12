@@ -1,10 +1,19 @@
 <% content_for :includes do %>
   <link rel="stylesheet" type="text/css" href="/index.css">
   <script src="/index.js"></script>
+  
   <script>
-    var v = document.getElementById("teaserVideo");
-    v.pause();
-
+    $( document ).ready(function() {
+      var v = document.getElementsByTagName('video')[0];
+      //v.pause();
+      
+      v.addEventListener("timeupdate", function(){
+          if(this.currentTime >= 11) {
+              this.pause();
+          }
+      });
+    });
+  
   </script>
 <% end %>
 
