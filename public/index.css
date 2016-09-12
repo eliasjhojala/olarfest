@@ -20,6 +20,17 @@
   user-select: none;          /* Likely future */
 }
 
+#teaserVideo {
+  width: 100%;
+  
+}
+
+#whiteBar {
+  width:100%;
+  height: 50px;
+  color: rgb(250, 250, 250);
+}
+
 #linkbar {
   background-color: rgba(0, 0, 0, 0.3);
   text-align: right;
@@ -67,4 +78,44 @@ span {
   height: 100%;
   margin-top: 0px;
   padding: 50px;
+}
+
+#rekryTitle {
+  margin-top: 60px;
+  margin-bottom: 20px;
+  font-size: 50px;
+//  font-weight: bold;
+  text-align: center;
+  color: rgb(50, 50, 50);
+}
+
+#rekryIcons {
+  text-align: center;
+  margin-top: 50px;
+  margin-bottom: 50px;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+#rekryIcons .block {
+  display: inline-block;
+}
+
+
+
+#rekryIcons .block img {
+  width: 200px;
+  margin: 50px;
+  margin-bottom: 0px;
+  pointer-events: none;
+  -webkit-user-select: none;  /* Chrome all / Safari all */
+  -moz-user-select: none;     /* Firefox all */
+  -ms-user-select: none;      /* IE 10+ */
+  user-select: none;          /* Likely future */
+}
+
+#rekryIcons h3 {
+  color: rgb(60, 60, 60);
+  font-size: 25px;
+  letter-spacing: 0.5px;
 }

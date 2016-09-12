@@ -1,11 +1,19 @@
 <% content_for :includes do %>
   <link rel="stylesheet" type="text/css" href="/index.css">
   <script src="/index.js"></script>
+  <script>
+    var v = document.getElementById("teaserVideo");
+    v.pause();
+
+  </script>
 <% end %>
 
 <div class="black">
   <div id="teaser">
-    <img id="teaserImage" src="teaser.jpg">
+    <video width="100%" id="teaserVideo" autoplay="true">
+      <source src="teaser.mp4" type="video/mp4">
+        <img id="teaserImage" src="teaser.jpg">
+    </video>
   </div>
 </div>
 
@@ -15,4 +23,20 @@
 
 <div id="description">
   OlarFest 2017 kerää Espoolaiset marraskuussa 2017 bilettämään Suomen kovimpien artistien tahdittamana. Tapahtuma on suunnattu 15-22 vuotiaille nuorille ja se järjestetään Olarin koulun ja lukion salissa. Yleisöön mahtuu 1000 ensimmäistä lipunostajaa.
+  <div id="rekryTitle">
+    Näihin tarvitaan tekijöitä
+  </div>
+  <div id="rekryIcons">
+    <% {
+        "Markkinointi" => "markkinointi.png",
+        "Rahoitus" => "budjetointi.png",
+      }.each do |name, address| %>
+      <span class="block"><img src="<%= "rekry_icons/#{address}" %>"><h3><%= name %></h3></span>
+    <% end %>
+    <!-- <span class="block"><img src="rekry_icons/markkinointi.png"><h3>Markkinointi</h3></span>
+    <span class="block"><img src="rekry_icons/budjetointi.png"><h3>Rahoitus</h3></span>
+    <span class="block"><img src="rekry_icons/rekrytointi.png"><h3>Rekrytointi</h3></span>
+    <span class="block"><img src="rekry_icons/turvallisuus.png"><h3>Turvallisuus</h3></span>
+    <span class="block"><img src="rekry_icons/paperwork.png"><h3>Luvat ja muut paperihommat</h3></span> -->
+  </div>
 </div>
