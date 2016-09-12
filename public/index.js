@@ -24,8 +24,8 @@ $( document ).ready(function() {
       video.play();
   };
 
-  body.addEventListener('ontouchstart', loadData, false);
-  body.addEventListener('onmousedown', loadData, false);
+  body.addEventListener('ontouchstart', loadData(), false);
+  body.addEventListener('onmousedown', loadData(), false);
   
 });
 
