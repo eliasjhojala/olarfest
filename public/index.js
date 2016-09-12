@@ -9,6 +9,7 @@ $( document ).ready(function() {
   $( window ).scroll(function() {
     setOpacity();
   });
+  $('video').play();
   $('video').bind("timeupdate", function() {
       if(this.currentTime >= 11) {
           this.pause();
