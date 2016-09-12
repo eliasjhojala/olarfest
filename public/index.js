@@ -19,5 +19,16 @@ $( document ).ready(function() {
     $('.playButton').css("display", "none")
   });
   
-  $(window).resize(playButtonLocation);
+  function linkBarFlow() {
+    if ($(window).width() < 888) {
+      $('.black').css('padding-top', $('#linkbar').outerHeight() + "px");
+    } else {
+      $('.black').css('padding-top', '0');
+    }
+  }
+  linkBarFlow();
+  $(window).resize(function() {
+    playButtonLocation();
+    linkBarFlow();
+  });
 });
