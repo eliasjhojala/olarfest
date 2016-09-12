@@ -110,7 +110,6 @@
 
 #rekryIcons .block img {
   width: 200px;
-  margin: 50px;
   margin-bottom: 0px;
   pointer-events: none;
   -webkit-user-select: none;  /* Chrome all / Safari all */
@@ -130,6 +129,7 @@
   margin: 0px;
   margin-top: 4px;
   min-height: 1em;
+  margin-bottom: 35px;
 }
 
 @media screen and (max-width: 24cm) {
@@ -155,10 +155,10 @@
   }
   #rekryIcons .block {
     width: 110px;
+    margin: 15px;
   }
   #rekryIcons .block img {
     width: 90px;
-    margin: 15px;
   }
   #rekryIcons h3 {
     font-size: 18px;
@@ -169,5 +169,6 @@
   #rekryIcons h5 {
     margin-top: 4px;
     min-height: 1em;
+    margin-bottom: 25px;
   }
 }
