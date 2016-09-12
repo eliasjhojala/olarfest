@@ -16,8 +16,8 @@ $( document ).ready(function() {
       }
   });
   
-  var body = $('#body');
-  var video = $('#video');
+  var body = document.getElementById('body');
+  var video = document.getElementById('teaserVideo');
 
   var loadData = function () {
       video.load();
