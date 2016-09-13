@@ -38,3 +38,13 @@ body {
   color: rgb(255, 255, 255);
   text-shadow: 1px 1px 1px rgb(250, 250, 250);
 }
+
+
+@media screen and (max-width: 24cm) {
+  #title {
+    visibility: hidden;
+  }
+  #linkbar span {
+    margin-right: 8px;
+  }
+}
