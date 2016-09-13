@@ -8,11 +8,11 @@ function scrollToElement(elementName) {
 
 $( document ).ready(function() {
   
-  if($(window).width() > 800) {
+  if($(window).width() > 8000) {
       $('#teaserVideo').html('<source src="teaser.mp4" type="video/mp4">');
   }
   else {
-    $('#teaserVideo').html('<source src="teaser_LowRes.mp4" type="video/mp4">');
+      $('#teaserVideo').html('<source src="teaser_LowRes.mp4" type="video/mp4">');
   }
   
   
