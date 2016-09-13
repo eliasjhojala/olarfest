@@ -8,7 +8,7 @@ function scrollToElement(elementName) {
 
 $( document ).ready(function() {
   
-  if($(window).width() > 8000) {
+  if($(window).width() > 800) {
       $('#teaserVideo').html('<source src="teaser.mp4" type="video/mp4">');
       
       alert("yli");
