@@ -22,10 +22,12 @@ body {
   float: right;
   position: fixed;
   overflow-x: hidden;
+  z-index: 2;
 }
 
 #linkbar span {
   margin-right: 40px;
+  z-index: 2;
 }
 
 #title {
@@ -37,6 +39,7 @@ body {
   margin-left: 40px;
   color: rgb(255, 255, 255);
   text-shadow: 1px 1px 1px rgb(250, 250, 250);
+  z-index: -1;
 }
 
 
@@ -46,5 +49,9 @@ body {
   }
   #linkbar span {
     margin-right: 8px;
+  }
+  #linkbar {
+    padding-top: 10px;
+    padding-bottom: 10px;
   }
 }
