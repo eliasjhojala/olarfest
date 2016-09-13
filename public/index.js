@@ -13,6 +13,10 @@ $( document ).ready(function() {
       
       alert("yli");
   }
+  else if($(window).width() > 600) {
+      $('#teaserVideo').html('<source src="teaser_LowRes.mp4" type="video/mp4">');
+      alert("alle");
+  }
   else {
       $('#teaserVideo').html('<source src="teaser_LowRes2.mp4" type="video/mp4">');
       alert("alle");
