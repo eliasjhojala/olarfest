@@ -8,6 +8,14 @@ function scrollToElement(elementName) {
 
 $( document ).ready(function() {
   
+  if($(window).width() > 800) {
+      $('#teaserVideo').html('<source src="teaser.mp4" type="video/mp4">');
+  }
+  else {
+    $('#teaserVideo').html('<source src="teaser_LowRes.mp4" type="video/mp4">');
+  }
+  
+  
 
   linkBarAlpha.init();
   
