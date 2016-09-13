@@ -3,6 +3,8 @@
     <meta http-equiv="Content-Type" content="text/html;charset=UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1">
     
+    <title>Olarfest</title>
+    
     <link rel="stylesheet" type="text/css" href="/app.css">
     <script src="/jquery.js"></script>
     <script src="/app.js"></script>
@@ -12,7 +14,16 @@
   
   <body>
     <div id="linkbar">
-      <span>ETUSIVU</span> <span>OLARFEST RY</span>    <span><a href="javascript:void(0)" onclick="scrollToElement('#rekryIcons');" >TEKIJÖILLE</a></span>     <span>YLEISÖLLE</span>
+      <%
+        [
+          ["ETUSIVU", "teaser"],
+          ["OLARFEST RY", ""],
+          ["TEKIJÖILLE", "rekryTitle"],
+          ["YLEISÖLLE", ""]
+        ].each do |text, element| %>
+        <span><a href="javascript:void(0)" onclick="scrollToElement('#<%= element %>');"><%= text %></a></span>
+      <% end %>
+      
       <div id="title">
         Olarfest
       </div>

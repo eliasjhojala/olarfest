@@ -30,6 +30,12 @@ body {
   z-index: 2;
 }
 
+#linkbar a:link {
+    text-decoration: none;
+    color: white;
+}
+
+
 #title {
   top: 0px;
   position: absolute;
