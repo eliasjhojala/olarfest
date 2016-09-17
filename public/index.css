@@ -125,6 +125,11 @@
   margin-top: 18px;
 }
 
+#rekryIcons h3 a:link {
+  text-decoration: none;
+  color: inherit;
+}
+
 #rekryIcons h5 {
   margin: 0px;
   margin-top: 4px;
