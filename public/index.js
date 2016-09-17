@@ -39,9 +39,9 @@ $(function() {
   }
   function linkBarFlow() {
     if (smallDisplay()) {
-      $('.black').css('margin-top', $('#linkbar').outerHeight() + "px");
+      $('.black').css('padding-top', $('#linkbar').outerHeight() + "px");
     } else {
-      $('.black').css('margin-top', '0');
+      $('.black').css('padding-top', '0');
     }
   }
   playButtonLocation();
