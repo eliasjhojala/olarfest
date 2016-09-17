@@ -23,6 +23,7 @@ $( document ).ready(function() {
 
 $(document).bind('pageinit') {
   onDocumentLoad();
+  alert("eg");
 }
 
 function onDocumentLoad() {
