@@ -21,7 +21,9 @@
           ["TEKIJÄKSI", "rekryTitle"],
           ["YLEISÖLLE", ""]
         ].each do |text, element| %>
-        <span><a href="javascript:void(0)" onclick="scrollToElement('#<%= element %>');"><%= text %></a></span>
+        <a href="#<%= element %>">
+          <%= text %>
+        </a>
       <% end %>
       
       <div id="title">

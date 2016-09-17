@@ -27,14 +27,11 @@ body {
   z-index: 2;
 }
 
-#linkbar span {
+#linkbar a {
   margin-right: 40px;
   z-index: 2;
-}
-
-#linkbar a:link {
-    text-decoration: none;
-    color: white;
+  text-decoration: none;
+  color: white;
 }
 
 
@@ -55,7 +52,7 @@ body {
   #title {
     visibility: hidden;
   }
-  #linkbar span {
+  #linkbar a {
     margin-right: 8px;
   }
   #linkbar {
