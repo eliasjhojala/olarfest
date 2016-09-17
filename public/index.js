@@ -7,14 +7,14 @@ function scrollToElement(elementName) {
 }
 
   function showPopup(elementName) {
-    $("#popup").show();
-    $("#popupBackground").show();
+    $("#popup").toggle();
+    $("#popupBackground").toggle();
     $("#popupContent").load("/rekry/" + String(elementName));
   }
 
 function hidePopup() {
-  $("#popup").hide();
-  $("#popupBackground").hide();
+  $("#popup").remove();
+  $("#popupBackground").remove();
 }
 
 $( document ).ready(function() {
@@ -23,7 +23,6 @@ $( document ).ready(function() {
 
 $(document).bind('pageinit', function() {
   onDocumentLoad();
-  alert("eg");
 });
 
 function onDocumentLoad() {
