@@ -1,11 +1,5 @@
 var linkBarAlpha;
 
-function scrollToElement(elementName) {
-  $('html, body').animate({
-    scrollTop: $(elementName).offset().top - 100
-  }, 500);
-}
-
   function showPopup(elementName) {
     $("#popup").show();
     $("#popupBackground").show();
