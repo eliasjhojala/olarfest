@@ -140,10 +140,17 @@
 
 #popup {
   position: fixed;
-  top: 25%;
-  left: 25%;
   width: 50%;
   height: 50%;
+  
+  left: 0;
+  right: 0;
+  top: 0;
+  bottom: 0;
+  
+  margin: auto;
+
+  
   background: white;
   border-radius: 5px;
   box-shadow: 0px 0px 2px black;
@@ -226,8 +233,6 @@
   }
   
   #popup {
-    top: 10%;
-    left: 0;
     width: 90%;
     height: 60%;
 
