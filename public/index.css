@@ -132,6 +132,31 @@
   margin-bottom: 45px;
 }
 
+
+#popup {
+  position: fixed;
+  top: 25%;
+  left: 25%;
+  width: 50%;
+  height: 50%;
+  background: white;
+  border-radius: 5px;
+  box-shadow: 0px 0px 2px black;
+  border: 3px solid rgb(150, 150, 150);
+  overflow-y: scroll;
+}
+
+
+#popupBackground {
+  background-color: rgba(0, 0, 0, 0.8);
+  position: fixed;
+  width: 100%;
+  height: 100%;
+  top: 0;
+  left: 0;
+}
+
+
 @media screen and (max-width: 24cm) {
   #description {
     width: calc(100% - 2 * 20px);

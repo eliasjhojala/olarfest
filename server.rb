@@ -6,4 +6,7 @@ class OlarFest < Sinatra::Base
 	get '/' do
 		erb :root
 	end
+	get '/rekryDescriptions/markkinointi' do
+		erb :'rekryDescriptions/markkinointi'
+	end
 end
