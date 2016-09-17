@@ -1,6 +1,10 @@
 var linkBarAlpha
 var popup;
 
+function smallDisplay() {
+  return $(window).width() < 888;
+}
+
 $(function() {
   if ($(window).width() > 800) {
       $('#teaserVideo').html('<source src="teaser.mp4" type="video/mp4">');
@@ -28,12 +32,13 @@ $(function() {
   $('video').on('play', function () {
     $('.playButton').css("display", "none")
   });
-  
   function playButtonLocation() {
-    $('.playButton').css("top", String($('#teaser').height() / 2 - 35 + $('#linkbar').outerHeight()) + "px");
+    var value = $('#teaser').height() / 2 - 35;
+    if (smallDisplay()) value += $('#linkbar').outerHeight();
+    $('.playButton').css("top", value + "px");
   }
   function linkBarFlow() {
-    if ($(window).width() < 888) {
+    if (smallDisplay()) {
       $('.black').css('padding-top', $('#linkbar').outerHeight() + "px");
     } else {
       $('.black').css('padding-top', '0');
@@ -74,7 +79,7 @@ linkBarAlpha = {
   },
   getAlpha: function() {
     var self = linkBarAlpha;
-    if ($(window).width() < 888) return 1;
+    if (smallDisplay()) return 1;
     var end = self.teaser.height() - self.linkbar.outerHeight();
     var start = end * 0.6;
     var current = $(window).scrollTop();
