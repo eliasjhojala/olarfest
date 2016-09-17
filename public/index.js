@@ -21,9 +21,8 @@ $( document ).ready(function() {
   onDocumentLoad();
 });
 
-$(document).bind('pageinit', function() {
+$( document ).bind('pageinit', function() {
   onDocumentLoad();
-  alert("eg");
 });
 
 function onDocumentLoad() {

@@ -59,4 +59,8 @@ body {
     padding-top: 10px;
     padding-bottom: 10px;
   }
+  
+  body {
+    font-size: 15px;
+  }
 }
