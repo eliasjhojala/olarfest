@@ -6,6 +6,17 @@ function scrollToElement(elementName) {
   }, 500);
 }
 
+  function showPopup(elementName) {
+    $("#popup").show();
+    $("#popupBackground").show();
+    $("#popupContent").load("/rekry/" + String(elementName));
+  }
+
+function hidePopup() {
+  $("#popup").hide();
+  $("#popupBackground").hide();
+}
+
 $( document ).ready(function() {
   
   if($(window).width() > 800) {
@@ -17,6 +28,8 @@ $( document ).ready(function() {
   else {
       $('#teaserVideo').html('<source src="teaser_LowRes2.mp4" type="video/mp4">');
   }
+  
+
   
   
 
