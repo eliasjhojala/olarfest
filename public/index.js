@@ -1,41 +1,17 @@
-var linkBarAlpha;
+var linkBarAlpha, popup;
 
-  function showPopup(elementName) {
-    $("#popup").show();
-    $("#popupBackground").show();
-    $("#popupContent").load("/rekry/" + String(elementName));
-  }
 
-function hidePopup() {
-  $("#popup").hide();
-  $("#popupBackground").hide();
-}
-
-$( document ).ready(function() {
-  onDocumentLoad();
-});
-
-$( document ).bind('pageinit', function() {
-  onDocumentLoad();
-});
-
-function onDocumentLoad() {
-  
-  if($(window).width() > 800) {
+$(function() {
+  if ($(window).width() > 800) {
       $('#teaserVideo').html('<source src="teaser.mp4" type="video/mp4">');
-  }
-  else if($(window).width() > 600) {
+  } else if ($(window).width() > 600) {
       $('#teaserVideo').html('<source src="teaser_LowRes.mp4" type="video/mp4">');
-  }
-  else {
+  } else {
       $('#teaserVideo').html('<source src="teaser_LowRes2.mp4" type="video/mp4">');
   }
   
-
-  
-  
-
   linkBarAlpha.init();
+  popup.init();
   
   var allowVideoPlay = true;
   $('video').bind("timeupdate", function() {
@@ -69,7 +45,7 @@ function onDocumentLoad() {
     playButtonLocation();
     linkBarFlow();
   });
-}
+});
 
 function clamp(val, min, max) {
   return Math.min(Math.max(val, min), max);
@@ -103,4 +79,33 @@ linkBarAlpha = {
     current -= start;
     return clamp(current / end, 0, 1) * (this.bottom - this.top) + this.top;
   }
-}
+};
+
+popup = {
+  element: null,
+  backgroundElement: null,
+  contentElement: null,
+  init: function(self = this) {
+    self.element = $('#popup');
+    self.backgroundElement = $('#popupBackground');
+    self.contentElement = $('#popupContent');
+    $('.open-popup').click(function(e) {
+      e.preventDefault();
+      self.show($(this).data('popup-url'));
+    });
+    $('.close-popup').click(function(e) {
+      e.preventDefault();
+      self.hide();
+    });
+  },
+  show: function(contentUrl, self = this) {
+    self.contentElement.load(contentUrl);
+    self.backgroundElement.show();
+    self.element.show();
+  },
+  hide: function(self = this) {
+    self.backgroundElement.hide();
+    self.element.hide();
+    self.contentElement.html("");
+  }
+};

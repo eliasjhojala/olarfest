@@ -39,18 +39,18 @@
         ["Kuvaus", "kuvaus.png", "kuvaus"],
         ["Riggaus", "riggaus.png", ""],
       ].each do |name, address, description| %>
-      <span class="block"><img src="<%= "/rekry_icons/#{address}" %>"><h3><a href="javascript:void(0)" onclick="showPopup('<%= description %>');"><%= name %></a></h3><h5></h5></span>
+      <a class="block open-popup" data-popup-url="/rekry/<%= description %>" href>
+        <img src="<%= "/rekry_icons/#{address}" %>">
+        <h3><%= name %></h3>
+        <h5></h5>
+      </a>
     <% end %>
   </div>
   
-
-    <div id="popupBackground">
-    </div>
-    
-    <div id="popup">
-      <p class="close"><a href="javascript:void(0)" onclick="hidePopup();">x </a></p>
-      <span id="popupContent"></span>
-    </div>
-
-  
+  <div id="popupBackground">
+  </div>
+  <div id="popup">
+    <p class="close"><a class="close-popup" href>x </a></p>
+    <span id="popupContent"></span>
+  </div>
 </div>
