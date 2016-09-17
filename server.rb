@@ -5,6 +5,13 @@ class OlarFest < Sinatra::Base
 	
 	get '/' do
 		@rekryType = nil
+		@novideo = nil
+		erb :root
+	end
+	
+	get '/novideo' do
+		@novideo = true
+		@rekryType = nil
 		erb :root
 	end
 	get '/rekryDescriptions/markkinointi' do
@@ -12,7 +19,8 @@ class OlarFest < Sinatra::Base
 	end
 	
 	get '/rekry/:type' do |type|
-	 @rekryType = type
-	 erb :root
+		@novideo = true
+	  @rekryType = type
+	  erb :root
 	end
 end

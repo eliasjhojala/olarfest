@@ -144,6 +144,21 @@
   box-shadow: 0px 0px 2px black;
   border: 3px solid rgb(150, 150, 150);
   overflow-y: scroll;
+  padding: 10px;
+}
+
+#popup .close {
+  layout: inline-block;
+  float: right;
+  margin-right: 4px;
+}
+
+#popup .close a:link {
+  text-decoration: none;
+}
+
+#popup h2, #popup .close {
+  margin-top: 0;
 }
 
 
