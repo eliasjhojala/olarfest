@@ -21,10 +21,10 @@ $( document ).ready(function() {
   onDocumentLoad();
 });
 
-$(document).bind('pageinit') {
+$(document).bind('pageinit', function() {
   onDocumentLoad();
   alert("eg");
-}
+});
 
 function onDocumentLoad() {
   
