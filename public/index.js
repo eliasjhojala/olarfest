@@ -1,5 +1,5 @@
-var linkBarAlpha, popup;
-
+var linkBarAlpha
+var popup;
 
 $(function() {
   if ($(window).width() > 800) {
@@ -58,26 +58,29 @@ linkBarAlpha = {
   bottom: 1,
   originalColor: null,
   init: function() {
-    this.linkbar = $('#linkbar');
-    this.teaser = $('#teaser');
-    this.top = this.linkbar.css("background-color");
-    this.originalColor = this.top.replace(/rgba\((.+),.+\)/, '$1');
-    this.top = Number(this.top.replace(/^.*,(.+)\)/,'$1'));
-    $( window ).on('scroll resize', () => this.set());
-    this.set();
+    var self = linkBarAlpha;
+    self.linkbar = $('#linkbar');
+    self.teaser = $('#teaser');
+    self.top = self.linkbar.css("background-color");
+    self.originalColor = self.top.replace(/rgba\((.+),.+\)/, '$1');
+    self.top = Number(self.top.replace(/^.*,(.+)\)/,'$1'));
+    $( window ).on('scroll resize', self.set);
+    self.set();
   },
   set: function() {
-    var color = "rgba(" + this.originalColor + ", " + this.getAlpha() + ")";
-    this.linkbar.css("background-color", color);
+    var self = linkBarAlpha;
+    var color = "rgba(" + self.originalColor + ", " + self.getAlpha() + ")";
+    self.linkbar.css("background-color", color);
   },
   getAlpha: function() {
+    var self = linkBarAlpha;
     if ($(window).width() < 888) return 1;
-    var end = this.teaser.height() - this.linkbar.outerHeight();
+    var end = self.teaser.height() - self.linkbar.outerHeight();
     var start = end * 0.6;
     var current = $(window).scrollTop();
     end -= start;
     current -= start;
-    return clamp(current / end, 0, 1) * (this.bottom - this.top) + this.top;
+    return clamp(current / end, 0, 1) * (self.bottom - self.top) + self.top;
   }
 };
 
@@ -85,7 +88,8 @@ popup = {
   element: null,
   backgroundElement: null,
   contentElement: null,
-  init: function(self = this) {
+  init: function() {
+    var self = popup;
     self.element = $('#popup');
     self.backgroundElement = $('#popupBackground');
     self.contentElement = $('#popupContent');
@@ -98,12 +102,14 @@ popup = {
       self.hide();
     });
   },
-  show: function(contentUrl, self = this) {
+  show: function(contentUrl) {
+    var self = popup;
     self.contentElement.load(contentUrl);
     self.backgroundElement.show();
     self.element.show();
   },
-  hide: function(self = this) {
+  hide: function() {
+    var self = popup;
     self.backgroundElement.hide();
     self.element.hide();
     self.contentElement.html("");
