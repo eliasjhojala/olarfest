@@ -18,6 +18,14 @@ function hidePopup() {
 }
 
 $( document ).ready(function() {
+  onDocumentLoad();
+});
+
+$(document).bind('pageinit') {
+  onDocumentLoad();
+}
+
+function onDocumentLoad() {
   
   if($(window).width() > 800) {
       $('#teaserVideo').html('<source src="teaser.mp4" type="video/mp4">');
@@ -67,7 +75,7 @@ $( document ).ready(function() {
     playButtonLocation();
     linkBarFlow();
   });
-});
+}
 
 function clamp(val, min, max) {
   return Math.min(Math.max(val, min), max);
