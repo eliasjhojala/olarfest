@@ -133,9 +133,17 @@ menuBox = {
       e.preventDefault();
       self.toggle();
     });
+    $('.close-menubox').click(function(e) {
+      e.preventDefault();
+      self.close();
+    });
   },
   toggle: function() {
     var self = menuBox;
     self.element.toggleClass('open');
+  },
+  close: function() {
+    var self = menuBox;
+    self.element.removeClass('open');
   }
 };
