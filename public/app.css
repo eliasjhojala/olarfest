@@ -79,7 +79,9 @@ body {
   
   #linkBarLinks {
     position: fixed;
-    right: 0;
+    right: -350px;
+    opacity: 0;
+    transition: right 200ms, opacity 1ms ease 200ms;
     top: 40px;
     background: white;
     padding: 30px;
@@ -101,8 +103,10 @@ body {
     color: rgba(26, 66, 119, 1);
   }
   
-  #linkbar:not(.open) #linkBarLinks, #linkbar:not(.open) .close-menubox, #linkbar.open .open-menubox {
-    display: none;
+  #linkbar.open #linkBarLinks {
+    right: 0;
+    opacity: 1;
+    transition: right 200ms, opacity 1ms ease 0ms;
   }
   
   #linkbar:not(.open) .toggle-menubox::before {
