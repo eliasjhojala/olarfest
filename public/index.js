@@ -1,5 +1,6 @@
 var linkBarAlpha
 var popup;
+var menuBox;
 
 function smallDisplay() {
   return $(window).width() < 888;
@@ -16,6 +17,7 @@ $(function() {
   
   linkBarAlpha.init();
   popup.init();
+  menuBox.init();
   
   var allowVideoPlay = true;
   $('video').bind("timeupdate", function() {
@@ -118,5 +120,36 @@ popup = {
     self.backgroundElement.hide();
     self.element.hide();
     self.contentElement.html("");
+  }
+};
+
+
+menuBox = {
+  element: null,
+  backgroundElement: null,
+  contentElement: null,
+  init: function() {
+    var self = menuBox;
+    self.element = $('#menuBox');
+    $('.open-menubox').click(function(e) {
+      e.preventDefault();
+      self.show();
+    });
+    $('.close-menubox').click(function(e) {
+      e.preventDefault();
+      self.hide();
+    });
+  },
+  show: function() {
+    var self = menuBox;
+    self.element.show();
+    $('.open-menubox').hide();
+    $('.close-menubox').show();
+  },
+  hide: function() {
+    var self = menuBox;
+    self.element.hide();
+    $('.open-menubox').show();
+    $('.close-menubox').hide();
   }
 };

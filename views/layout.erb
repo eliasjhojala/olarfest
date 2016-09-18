@@ -5,6 +5,8 @@
     
     <title>Olarfest</title>
     
+    <link rel="stylesheet" type="text/css" href="https://fonts.googleapis.com/css?family=Open+Sans">
+    <link rel="stylesheet" type="text/css" href="https://fonts.googleapis.com/icon?family=Material+Icons">
     <link rel="stylesheet" type="text/css" href="/app.css">
     <script src="/jquery.js"></script>
     <script src="/app.js"></script>
@@ -21,24 +23,50 @@
     <%= yield_content :includes %>
   </head>
   
+  <%
+    links = [
+      ["Etusivu", "teaser"],
+      ["Olarfest ry", ""],
+      ["Tekijäksi", "rekryTitle"],
+      ["Yleisölle", ""]
+    ];
+  %>
+  
   <body>
     <div id="linkbar">
-      <%
-        [
-          ["ETUSIVU", "teaser"],
-          ["OLARFEST RY", ""],
-          ["TEKIJÄKSI", "rekryTitle"],
-          ["YLEISÖLLE", ""]
-        ].each do |text, element| %>
-        <a href="#<%= element %>">
-          <%= text %>
+      <span id="linkBarLinks">
+        <%
+          links.each do |text, element| %>
+          <a href="#<%= element %>">
+            <%= text %>
+          </a>
+        <% end %>
+      </span>
+      <span id="menuBoxIcon">
+        <a href="#" class="open-menubox">
+          menu
         </a>
-      <% end %>
+        <a href="#" class="close-menubox">
+          close
+        </a>
+      </span>
       
       <div id="title">
         Olarfest
       </div>
     </div>
+    
+    <div id="menuBox">
+      
+      <%
+        links.each do |text, element| %>
+        <a href="#<%= element %>">
+          <%= text %>
+        </a><br>
+      <% end %>
+      
+    </div>
+    
     <%= yield %>
   </body>
 </html>

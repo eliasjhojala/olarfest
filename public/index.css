@@ -191,7 +191,6 @@
   display: none;
 }
 
-
 @media screen and (max-width: 24cm) {
   #description {
     width: calc(100% - 2 * 20px);
