@@ -114,12 +114,16 @@ popup = {
     self.contentElement.load(contentUrl);
     self.backgroundElement.show();
     self.element.show();
+    $(document).keyup(function (e) {
+      if (e.keyCode == 27) self.hide(); // ESC
+    });
   },
   hide: function() {
     var self = popup;
     self.backgroundElement.hide();
     self.element.hide();
     self.contentElement.html("");
+    $(document).off('keyup');
   }
 };
 
