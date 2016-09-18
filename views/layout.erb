@@ -5,8 +5,6 @@
     
     <title>Olarfest</title>
     
-    <link rel="stylesheet" type="text/css" href="https://fonts.googleapis.com/css?family=Open+Sans">
-    <link rel="stylesheet" type="text/css" href="https://fonts.googleapis.com/icon?family=Material+Icons">
     <link rel="stylesheet" type="text/css" href="/app.css">
     <script src="/jquery.js"></script>
     <script src="/app.js"></script>
@@ -34,37 +32,20 @@
   
   <body>
     <div id="linkbar">
-      <span id="linkBarLinks">
-        <%
-          links.each do |text, element| %>
+      <div id="linkBarLinks">
+        <% links.each do |text, element| %>
           <a href="#<%= element %>">
             <%= text %>
           </a>
         <% end %>
-      </span>
+      </div>
       <span id="menuBoxIcon">
-        <a href="#" class="open-menubox">
-          menu
-        </a>
-        <a href="#" class="close-menubox">
-          close
-        </a>
+        <a href class="toggle-menubox material-icons"></a>
       </span>
       
       <div id="title">
         Olarfest
       </div>
-    </div>
-    
-    <div id="menuBox">
-      
-      <%
-        links.each do |text, element| %>
-        <a href="#<%= element %>">
-          <%= text %>
-        </a><br>
-      <% end %>
-      
     </div>
     
     <%= yield %>

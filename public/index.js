@@ -1,4 +1,4 @@
-var linkBarAlpha
+var linkBarAlpha;
 var popup;
 var menuBox;
 
@@ -126,30 +126,16 @@ popup = {
 
 menuBox = {
   element: null,
-  backgroundElement: null,
-  contentElement: null,
   init: function() {
     var self = menuBox;
-    self.element = $('#menuBox');
-    $('.open-menubox').click(function(e) {
+    self.element = $('#linkbar');
+    $('.toggle-menubox').click(function(e) {
       e.preventDefault();
-      self.show();
-    });
-    $('.close-menubox').click(function(e) {
-      e.preventDefault();
-      self.hide();
+      self.toggle();
     });
   },
-  show: function() {
+  toggle: function() {
     var self = menuBox;
-    self.element.show();
-    $('.open-menubox').hide();
-    $('.close-menubox').show();
-  },
-  hide: function() {
-    var self = menuBox;
-    self.element.hide();
-    $('.open-menubox').show();
-    $('.close-menubox').hide();
+    self.element.toggleClass('open');
   }
 };
