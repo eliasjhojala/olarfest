@@ -62,7 +62,10 @@ body {
 
 @media screen and (max-width: 24cm) {
   #title {
-    display: none;
+    font-size: 24px;
+    margin-left: 15px;
+    margin-top: 3px;
+    box-shadow: 0px;
   }
   #linkbar a {
     margin-right: 8px;
