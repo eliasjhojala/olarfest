@@ -80,6 +80,21 @@
   padding: 50px;
 }
 
+#yhdistys {
+  width: 100%;
+  font-size: 20px;
+}
+
+#yhdistys h2 {
+  font-size: 50px;
+  font-weight: normal;
+}
+
+#blankEnd {
+  width: 100%;
+  height: 100%;
+}
+
 
 
 #rekryTitle {
@@ -87,7 +102,7 @@
   margin-bottom: 10px;
   font-size: 50px;
 //  font-weight: bold;
-  text-align: center;
+  text-align: left;
   color: rgb(50, 50, 50);
 }
 
