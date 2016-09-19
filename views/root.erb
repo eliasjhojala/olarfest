@@ -16,17 +16,45 @@
   </div>
 </div>
 
-<div id="siteSubject">
-  Olarfest 2017 - Tule mukaan!
-</div>
+<div id="siteSubject">Olarfest 2017 - Tule mukaan!</div>
 
 <div id="description">
-  OlarFest 2017 kerää Espoolaiset marraskuussa 2017 bilettämään Suomen kovimpien artistien tahdittamana. Tapahtuma on suunnattu 15-22 vuotiaille nuorille ja se järjestetään Olarin koulun ja lukion salissa. Yleisöön mahtuu 1000 ensimmäistä lipunostajaa.
+  Suomen kovimmat artistit ottavat lavan haltuun marraskuussa 2017, kun yli 15-vuotiaat pääkaupunkiseutulaiset kokoontuvat Espooseen bilettämään. Varmista paikkasi näissä bileissä pysymällä kuulolla, sillä lippuja on rajoitetusti!
   <br><br>
-  Jos olet kiinnostunut tapahtumien järjestämisestä tai jostain mitä alta löytyy niin ota yhteyttä ja ole yksi syksyn parhaimman tapahtuman järjestäjistä! Alta näet erilaisia asioita mitä projektissa voi tehdä. Kaikilla alueilla tarvitaan sekä vastuuhenkilöä, että tekijöitä.
+  
+  <div id="someIcons">
+    <%
+      [
+        ["", "instagram.png", "http://urlgeni.us/instagram/qdRw"],
+        ["", "snapchat.png", "https://www.snapchat.com/add/olarfest"],
+        ["", "twitter.png", "https://twitter.com/olarfest"],
+        ["", "facebook.png", "https://www.facebook.com/olarfest"],
+      ].each do |name, address, description| %>
+      <a class="block" target="blank" href="<%= description %>">
+        <img src="<%= "/some_icons/#{address}" %>">
+        <h3><%= name %></h3>
+        <h5></h5>
+      </a>
+    <% end %>
+  </div>
+
+  <div id="yleiso">
+    <h2>Yleisölle</h2>
+    
+    Lippujen hinnat ja artistit julkaistaan kevään 2017 aikana nettisivuillamme ja sosiaalisessa mediassa. Ota siis @olarfest seurantaan niin Instagramissa, Twitterissä kuin Facebookissakin, niin saat tiedon ensimmäisten joukossa!
+    
+  </div>
+  
   <div id="rekryTitle">
     <h2>Tekijäksi</h2>
   </div>
+  
+  Jos olet kiinnostunut tapahtuman järjestämisestä,
+  <b><a href="#contact">ota yhteyttä </a></b>
+  ja ole yksi syksyn parhaimman tapahtuman järjestäjistä! Tarjolla on paikkoja tekijätasosta johtotehtäviin. Tapahtuma tehdään enimmäkseen vapaaehtoisvoimin, joten palkkaa emme voi tarjota. Saat kuitenkin etuja ja mittaamattoman arvokasta kokemusta.
+  <br><br>
+  <h2 style="text-align: center;">Osa-alueet</h2>
+  
   <div id="rekryIcons">
     <%
       [
@@ -45,6 +73,10 @@
         <h5></h5>
       </a>
     <% end %>
+  </div>
+  
+  <div id="contact" style="margin-top:-100px; padding-top:100px;">
+    Jos kiinnostuit tai kysymyksiä heräsi, ota yhteyttä osoitteeseen <a href="mailto:toimisto@olarfest.fi">toimisto@olarfest.fi</a>.
   </div>
   
   <div id="yhdistys">

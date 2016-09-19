@@ -85,6 +85,11 @@
   font-size: 20px;
 }
 
+#yleiso {
+  width: 100%;
+  font-size: 20px;
+}
+
 
 #blankEnd {
   width: 100%;
@@ -102,10 +107,39 @@
   color: rgb(50, 50, 50);
 }
 
-#yhdistys h2, #rekryTitle h2 {
+#yhdistys h2, #rekryTitle h2, #yleiso h2 {
   font-size: 50px;
   font-weight: normal;
 }
+
+
+
+#someIcons {
+  text-align: center;
+  margin-top: 50px;
+  margin-bottom: 50px;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+#someIcons .block {
+  display: inline-block;
+  vertical-align: top;
+  width: 15%;
+  margin: 0 20px;
+}
+
+#someIcons .block img {
+  width: 100%;
+  margin-bottom: 0px;
+  pointer-events: none;
+  -webkit-user-select: none;  /* Chrome all / Safari all */
+  -moz-user-select: none;     /* Firefox all */
+  -ms-user-select: none;      /* IE 10+ */
+  user-select: none;          /* Likely future */
+}
+
+
 
 #rekryIcons {
   text-align: center;
@@ -224,6 +258,21 @@
     font-size: 30px;
     margin-top: 30px;
   }
+  
+  #someIcons {
+    text-align: center;
+    margin-top: 15px;
+    margin-bottom: 0px;
+  }
+  #someIcons .block {
+    width: 17%;
+    margin: 3%;
+  }
+  #someIcons .block img {
+    width: 100%;
+  }
+  
+  
   #rekryIcons {
     text-align: center;
     margin-top: 15px;
@@ -248,7 +297,7 @@
     margin-bottom: 25px;
   }
   
-  #yhdistys h2, #rekryTitle h2 {
+  #yhdistys h2, #rekryTitle h2, #yleiso h2 {
     font-size: 40px;
     font-weight: normal;
   }
