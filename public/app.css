@@ -81,7 +81,7 @@ body {
     position: fixed;
     right: -350px;
     opacity: 0;
-    transition: right 200ms, opacity 1ms ease 200ms;
+    transition: right 700ms, opacity 1ms ease 700ms;
     top: 40px;
     background: white;
     padding: 30px;
@@ -106,7 +106,7 @@ body {
   #linkbar.open #linkBarLinks {
     right: 0;
     opacity: 1;
-    transition: right 200ms, opacity 1ms ease 0ms;
+    transition: right 400ms, opacity 1ms ease 0ms;
   }
   
   #linkbar:not(.open) .toggle-menubox::before {
