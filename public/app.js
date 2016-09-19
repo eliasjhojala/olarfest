@@ -1,7 +1,7 @@
 function scrollToElement(elementName) {
-  var scrollTop     = $('body').scrollTop(),
-    elementOffset = $(elementName).offset().top,
-    distance      = (elementOffset - scrollTop);
+  var scrollTop    = $('body').scrollTop(),
+    elementOffset  = $(elementName).offset().top,
+    distance       = (elementOffset - scrollTop);
     
     distance = Math.min(Math.abs( distance ), 1500);
     
