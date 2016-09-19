@@ -85,10 +85,6 @@
   font-size: 20px;
 }
 
-#yhdistys h2 {
-  font-size: 50px;
-  font-weight: normal;
-}
 
 #blankEnd {
   width: 100%;
@@ -104,6 +100,11 @@
 //  font-weight: bold;
   text-align: left;
   color: rgb(50, 50, 50);
+}
+
+#yhdistys h2, #rekryTitle h2 {
+  font-size: 50px;
+  font-weight: normal;
 }
 
 #rekryIcons {
@@ -244,6 +245,11 @@
     margin-top: 4px;
     min-height: 1em;
     margin-bottom: 25px;
+  }
+  
+  #yhdistys h2, #rekryTitle h2 {
+    font-size: 40px;
+    font-weight: normal;
   }
   
   #popup {
