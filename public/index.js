@@ -19,11 +19,10 @@ $(function() {
   popup.init();
   menuBox.init();
   
-  var allowVideoPlay = true;
   $('video').bind("timeupdate", function() {
     if(this.currentTime >= 11) {
       this.pause();
-      allowVideoPlay = false;
+      $(document).off('touchstart click');
     }
   });
   

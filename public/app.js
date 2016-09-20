@@ -31,6 +31,7 @@ $(function () {
       });
       
       setTimeout(function() {
+        $(document).off('touchstart click');
         var wait = videoIsPlaying ? 3700 : 0;
         setTimeout(function() {
           scrollToElement(
