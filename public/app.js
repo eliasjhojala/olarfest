@@ -1,4 +1,4 @@
-var hashEnd = ".";
+var hashEnd = "_";
 
 function scrollToElement(elementName) {
   var scrollTop    = $('body').scrollTop(),
