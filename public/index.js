@@ -26,9 +26,12 @@ $(function() {
     }
   });
   
-  $(document).on('touchstart click', function () {
-    if(allowVideoPlay) $('video').get(0).play();
-  });
+  function playVideo() {
+    $('video').get(0).play();
+  }
+  $('video, playButton').click(playVideo);
+  
+  $(document).on('touchstart click', playVideo);
   
   $('video').on('play', function () {
     $('.playButton').css("display", "none")
