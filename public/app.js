@@ -22,6 +22,7 @@ $(function () {
       scrollToElement(element);
     }
   });
+  
   if (window.location.hash) {
     
     var videoIsPlaying = false;
