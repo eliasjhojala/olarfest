@@ -1,5 +1,9 @@
 @import "https://fonts.googleapis.com/css?family=Open+Sans|Material+Icons";
 
+a {
+  color: rgb(50, 80, 150);
+  text-decoration: none;
+}
 
 html {
   font-family: 'Open Sans';
@@ -89,7 +93,7 @@ body {
     position: fixed;
     right: -350px;
     opacity: 0;
-    transition: right 700ms, opacity 1ms ease 700ms;
+    transition: right ease-in 500ms, opacity 1ms ease 500ms;
     top: 40px;
     background: white;
     padding: 30px;

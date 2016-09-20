@@ -1,3 +1,5 @@
+var hashEnd = ".";
+
 function scrollToElement(elementName) {
   var scrollTop    = $('body').scrollTop(),
     elementOffset  = $(elementName).offset().top,
@@ -10,14 +12,21 @@ function scrollToElement(elementName) {
   }, distance);
 }
 
-
-$(document).ready(function () {
-  $('#linkBarLinks a').click(function(e) {
+$(function () {
+  window.scrollTo(0, 0);
+  $('a[href^="#"]').click(function(e) {
     e.preventDefault();
     var element = $(this).attr('href');
     if (element !== "#") {
-      history.pushState({}, '', element);
+      history.pushState({}, '', element + hashEnd);
       scrollToElement(element);
     }
   });
+  if (window.location.hash) {
+    setTimeout(function() {
+      scrollToElement(
+        window.location.hash.replace(new RegExp(hashEnd + "$"), "")
+      );
+    }, 4300);
+  }
 });
