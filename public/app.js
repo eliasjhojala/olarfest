@@ -23,10 +23,18 @@ $(function () {
     }
   });
   if (window.location.hash) {
+    var videoIsPlaying = false;
+    setTimeOut(function() {
+      $('video').on('play', function () {
+        videoIsPlaying = true;
+      }
+    }, 500);
+    var timeOut = 0;
+    if(videoIsPlaying) { timeOut = 3800; }
     setTimeout(function() {
       scrollToElement(
         window.location.hash.replace(new RegExp(hashEnd + "$"), "")
       );
-    }, 4300);
+    }, timeOut);
   }
 });
