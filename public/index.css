@@ -107,7 +107,7 @@
   color: rgb(50, 50, 50);
 }
 
-#yhdistys h2, #rekryTitle h2, #yleiso h2 {
+h2 {
   font-size: 50px;
   font-weight: normal;
 }
@@ -297,10 +297,11 @@
     margin-bottom: 25px;
   }
   
-  #yhdistys h2, #rekryTitle h2, #yleiso h2 {
+  h2 {
     font-size: 40px;
     font-weight: normal;
   }
+
   
   #popup {
     width: 90%;
