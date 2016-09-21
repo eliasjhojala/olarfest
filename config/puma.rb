@@ -1,4 +1,4 @@
-if ENV['ENVIRONMENT'] == 'production'
+if ENV['RACK_ENV'] == 'production'
 
   # pumactl (DON'T allow external access!)
   activate_control_app "tcp://127.0.0.1:#{File.read('tmp/control_port').strip}"
