@@ -2,7 +2,7 @@ var hashEnd = "_";
 
 function scrollToElement(elementName) {
   var scrollTop    = $('body').scrollTop(),
-    elementOffset  = $(elementName).offset().top,
+    elementOffset  = $(elementName).offset().top - 100,
     distance       = (elementOffset - scrollTop);
     
     distance = Math.min(Math.abs( distance ), 1500);
