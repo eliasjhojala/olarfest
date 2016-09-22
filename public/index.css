@@ -241,13 +241,6 @@ h2 {
   display: none;
 }
 
-.donors span {
-  font-family: Ubuntu;
-  display: inline-block;
-  vertical-align: middle;
-  color :rgb(50, 50, 50);
-}
-
 @media screen and (max-width: 24cm) {
   #description {
     width: calc(100% - 2 * 20px);
