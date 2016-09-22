@@ -20,7 +20,9 @@ ja ole yksi syksyn parhaimman tapahtuman järjestäjistä! Tarjolla on paikkoja 
       ["Kuvaus", "kuvaus.png", "kuvaus"],
       ["Tekniikka", "tekniikka.png", "tekniikka"],
     ].each do |name, address, description| %>
-    <a class="block open-popup" data-popup-url="/rekry/<%= description %>" href>
+    <a class="block open-popup" href
+      data-popup-url="/rekry/<%= description %>"
+      data-title="<%= name %>">
       <img src="<%= "/rekry_icons/#{address}" %>">
       <h3><%= name %></h3>
       <h5></h5>

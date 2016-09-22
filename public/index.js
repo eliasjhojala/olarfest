@@ -23,6 +23,7 @@ $(function() {
     if(this.currentTime >= 11) {
       this.pause();
       $(document).off('touchstart click');
+      $('video, playbutton').off('touchstart click');
     }
   });
   
@@ -97,23 +98,27 @@ popup = {
   element: null,
   backgroundElement: null,
   contentElement: null,
+  titleElement: null,
   init: function() {
     var self = popup;
     self.element = $('#popup');
     self.backgroundElement = $('#popupBackground');
     self.contentElement = $('#popupContent');
+    self.titleElement = $('#popup-title');
     $('.open-popup').click(function(e) {
       e.preventDefault();
-      self.show($(this).data('popup-url'));
+      var me = $(this);
+      self.show(me.data('popup-url'), me.data('title'));
     });
     $('.close-popup').click(function(e) {
       e.preventDefault();
       self.hide();
     });
   },
-  show: function(contentUrl) {
+  show: function(contentUrl, title) {
     var self = popup;
     self.contentElement.load(contentUrl);
+    self.titleElement.html(title);
     self.backgroundElement.show();
     self.element.show();
     $(document).keyup(function (e) {
