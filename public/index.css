@@ -156,14 +156,27 @@ h2 {
   margin: 0 20px;
 }
 
-#rekryIcons .block img {
+#rekryIcons .block .bg img {
   width: 200px;
-  margin-bottom: 0px;
+  margin-bottom: auto;
+  margin-top: auto;
+  display: inline-block;
+  vertical-align: middle;
   pointer-events: none;
   -webkit-user-select: none;  /* Chrome all / Safari all */
   -moz-user-select: none;     /* Firefox all */
   -ms-user-select: none;      /* IE 10+ */
   user-select: none;          /* Likely future */
+}
+
+#rekryIcons .bg {
+  background: rgba(150, 66, 119, 1);
+  border-radius: 100%;
+  width: 200px;
+  height: 200px;
+  display: inline-block;
+  vertical-align: middle;
+  border: 3px solid rgb(200, 80, 120);
 }
 
 #rekryIcons h3 {
