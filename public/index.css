@@ -262,6 +262,12 @@ h2 {
   color :rgb(50, 50, 50);
 }
 
+#sponsorit img {
+  width: 30%;
+  margin-bottom: 30px;
+  vertical-align: middle;
+}
+
 @media screen and (max-width: 24cm) {
   #description {
     width: calc(100% - 2 * 20px);
