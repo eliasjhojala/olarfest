@@ -241,6 +241,12 @@ h2 {
   display: none;
 }
 
+#contact {
+  width: 70%;
+  margin-left: auto;
+  margin-right: auto;
+}
+
 @media screen and (max-width: 24cm) {
   #description {
     width: calc(100% - 2 * 20px);
@@ -317,4 +323,10 @@ h2 {
     display: none;
   }
   
+  #contact {
+    width: calc(100% - 2 * 20px);
+    margin-left: 0px;
+    margin-right: 0px;
+    padding: 20px;
+  }
 }
