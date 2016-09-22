@@ -29,13 +29,8 @@
     ["Aamos Valjus",80]
   ].each do |name, sum| %>
     <% font_size = 12 + sum / 15
-       margin = rand(10...100) %>
-    <span style="
-        font-size: <%= font_size %>px;
-        margin-right: <%= font_size %>px;
-      ">
-      <%= name %>
-    </span>
-    <span style="font-family: Ubuntu; display: inline-block; font-size: <%= fontSize %>; margin-right: <%= fontSize %>; vertical-align: middle; color:rgb(50, 50, 50);"><%= name %></span>
-  <% end %>
+       margin = rand(10...100)
+    %>
+      <span style="font-size: <%= font_size %>px; margin-right: <%= font_size %>px;"><%= name %></span>
+    <% end %>
 </div>

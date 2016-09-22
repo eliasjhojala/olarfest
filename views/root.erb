@@ -3,108 +3,29 @@
   <script src="/index.js"></script>
 <% end %>
 
-<div class="black">
-  <div id="teaser">
-    <div class="playButton">
-      <div class="circle"></div>
-      <div class="arrow"></div>
-    </div>
-    <video width="100%" id="teaserVideo" autoplay="true" playsinline>
-      <!-- <source src="teaser.mp4" type="video/mp4"> -->
-        <!-- <img id="teaserImage" src="teaser.jpg"> -->
-    </video>
-  </div>
-</div>
+
+
+<%= erb :teaser %>
 
 <div id="siteSubject">Olarfest 2017 - Tule mukaan!</div>
 
 <div id="description">
-  Suomen kovimmat artistit ottavat lavan haltuun marraskuussa 2017, kun yli 15-vuotiaat pääkaupunkiseutulaiset kokoontuvat Espooseen bilettämään. Varmista paikkasi näissä bileissä pysymällä kuulolla, sillä lippuja on rajoitetusti!
+  <%= erb :description %>
   <br><br>
   
-  <div id="someIcons">
-    <%
-      ["instagram.png", "http://urlgeni.us/instagram/qdRw"],
-        ["snapchat.png", "https://www.snapchat.com/add/olarfest"],
-        ["twitter.png", "https://twitter.com/olarfest"],
-        ["facebook.png", "https://www.facebook.com/olarfest"],
-      ].each do |image, target| %>
-      <a class="block" target="blank" href="<%= target %>">
-        <img src="<%= "/some_icons/#{image}" %>">
-      </a>
-    <% end %>
-  </div>
-
-  <div id="yleiso">
-    <h2>Yleisölle</h2>
-    
-    Lippujen hinnat ja artistit julkaistaan kevään 2017 aikana nettisivuillamme ja sosiaalisessa mediassa. Ota siis @olarfest seurantaan niin Instagramissa, Twitterissä kuin Facebookissakin, niin saat tiedon ensimmäisten joukossa!
-    
-  </div>
-  
-  <div id="rekryTitle">
-    <h2>Tekijäksi</h2>
-  </div>
-  
-  Jos olet kiinnostunut tapahtuman järjestämisestä,
-  <b><a href="#contact">ota yhteyttä </a></b>
-  ja ole yksi syksyn parhaimman tapahtuman järjestäjistä! Tarjolla on paikkoja tekijätasosta johtotehtäviin. Tapahtuma tehdään enimmäkseen vapaaehtoisvoimin, joten palkkaa emme voi tarjota. Saat kuitenkin etuja ja mittaamattoman arvokasta kokemusta.
-  <br><br>
-  <h2 style="text-align: center;">Osa-alueet</h2>
-  
-  <div id="rekryIcons">
-    <%
-      [
-        ["Markkinointi", "markkinointi.png", "markkinointi"],
-        ["Rahoitus", "budjetointi.png", "rahoitus"],
-        ["Rekrytointi", "rekrytointi.png", "rekrytointi"],
-        ["Turvallisuus", "turvallisuus.png", "turvallisuus"],
-        ["Toimisto", "paperwork.png", "toimisto"],
-        ["Catering", "catering.png", "catering"],
-        ["Kuvaus", "kuvaus.png", "kuvaus"],
-        ["Tekniikka", "tekniikka.png", "tekniikka"],
-      ].each do |name, address, description| %>
-      <a class="block open-popup" data-popup-url="/rekry/<%= description %>" href>
-        <img src="<%= "/rekry_icons/#{address}" %>">
-        <h3><%= name %></h3>
-        <h5></h5>
-      </a>
-    <% end %>
-    
-    
-  </div>
-  Jos kiinnostuit tai kysymyksiä heräsi, ota yhteyttä <a href="#contact">toimistoon</a>.
-  
-  
-  <div id="yhdistys">
-    <%= erb :olarfest_ry %>
-  </div>
-  
-  <div id="lahjoita">
-    <%= erb :lahjoita %>
-  </div>
+  <%= erb :some_icons %>
+  <%= erb :yleiso %>
+  <%= erb :rekry %>
+  <div id="yhdistys"><%= erb :olarfest_ry %></div>
+  <div id="lahjoita"><%= erb :lahjoita %></div>
   
   <div id="lahjoittajat"><br>
     <h2>Lahjoitukset ja sponsorit</h2>
     <%= erb :lahjoittajat %>
     <%= erb :sponsorit %>
   </div>
-  
-  
-  
 
+  <%= erb :popup %>
+</div>
   
-  <div id="popupBackground" class="close-popup"></div>
-  <div id="popup">
-    <p class="close"><a class="close-popup" href>x </a></p>
-    <span id="popupContent"></span>
-  </div>
-</div>
-
-<div id="bottomBar" style="float: bottom; background: rgba(5, 23, 60, 1); color:white; padding-bottom: 20px; padding-top: 1px;">
-  <div id="contact">
-  
-    <h3 style="font-size: 30px; margin-top: 15px; margin-bottom: 15px;">Yhteystiedot</h3>
-    Toimisto: <a style="color: white;" href="mailto:toimisto@olarfest.fi">toimisto@olarfest.fi</a>
-</div>
-</div>
+<%= erb :bottom_bar %>

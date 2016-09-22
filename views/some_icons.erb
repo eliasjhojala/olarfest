@@ -1,0 +1,14 @@
+
+<div id="someIcons">
+  <%
+    [
+      ["instagram.png", "http://urlgeni.us/instagram/qdRw"],
+      ["snapchat.png", "https://www.snapchat.com/add/olarfest"],
+      ["twitter.png", "https://twitter.com/olarfest"],
+      ["facebook.png", "https://www.facebook.com/olarfest"],
+    ].each do |image, target| %>
+    <a class="block" target="blank" href="<%= target %>">
+      <img src="<%= "/some_icons/#{image}" %>">
+    </a>
+  <% end %>
+</div>
