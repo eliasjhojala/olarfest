@@ -1,0 +1,26 @@
+<% content_for :includes do %>
+  <style>
+    #sponsorit img {
+      width: 30%;
+      margin-bottom: 30px;
+      vertical-align: middle;
+    }
+  </style>
+<% end %>
+
+<div style="height:10%;"></div>
+<span id="sponsorit">
+<%
+  [
+    "https://upload.wikimedia.org/wikipedia/fi/archive/8/8b/20120730073132!Lumene_logo.jpg",
+    "http://www.hartwall.fi/wp-content/uploads/2016/04/Hartwall_Logo_CMYK_2800__of_0.png",
+    "http://brightgroup.dekodes.no/content/uploads/2013/01/Bright-NO-Logo-Cyan-260x150.jpg",
+    "https://upload.wikimedia.org/wikipedia/fi/thumb/8/8a/Prisman_logo.svg/800px-Prisman_logo.svg.png"
+  
+  ].each do |src|
+%>
+    
+    <img src="<%= src %>">
+    
+    <% end %>
+</span>
