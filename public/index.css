@@ -217,47 +217,36 @@ h2 {
   bottom: 0;
   
   margin: auto;
-
   
   background: white;
   border-radius: 5px;
   box-shadow: 0px 0px 2px black;
   border: 3px solid rgb(150, 150, 150);
   padding: 10px;
+  display: flex;
+  flex-direction: column;
+}
+
+#popup:not(.open) {
   display: none;
 }
 
 #popup .title .close-popup {
   float: right;
-  padding: 17px;
+  color: rgb(74, 74, 74);
 }
 
-#popup .title h2 {
-  display: inline-block;
-  padding: 0px;
-  margin: 0px;
-  margin-bottom: 8px;
+#popup .title {
+  line-height: 1em;
+  padding: 0.4em 0.4em 0.4em 0;
+  margin: 0 0 0.2em 0;
+  border-bottom: 1px solid gray;
 }
 
 #popupContent {
-  height: calc(100% - 50px - 9px - 8px);
   overflow-y: scroll;
+  flex-grow: 1;
 }
-
-#popup .close {
-  layout: inline-block;
-  float: right;
-  margin-right: 4px;
-}
-
-#popup .close a:link {
-  text-decoration: none;
-}
-
-#popup h2, #popup .close {
-  margin-top: 0;
-}
-
 
 #popupBackground {
   background-color: rgba(0, 0, 0, 0.8);
@@ -266,7 +255,9 @@ h2 {
   height: 100%;
   top: 0;
   left: 0;
-  
+}
+
+#popupBackground:not(.open) {
   display: none;
 }
 
@@ -376,12 +367,10 @@ h2 {
     border: 2px solid rgb(150, 150, 150);
     padding: 10px;
     font-size: 15px;
-    
-    display: none;
   }
   
-  #popup h2 {
-    margin-bottom: 6px;
+  #popup .title {
+    font-size: 24px;
   }
   
   #popupContent {

@@ -119,16 +119,16 @@ popup = {
     var self = popup;
     self.contentElement.load(contentUrl);
     self.titleElement.html(title);
-    self.backgroundElement.show();
-    self.element.show();
+    self.backgroundElement.addClass('open');
+    self.element.addClass('open');
     $(document).keyup(function (e) {
       if (e.keyCode == 27) self.hide(); // ESC
     });
   },
   hide: function() {
     var self = popup;
-    self.backgroundElement.hide();
-    self.element.hide();
+    self.backgroundElement.removeClass('open');
+    self.element.removeClass('open');
     self.contentElement.html("");
     $(document).off('keyup');
   }
