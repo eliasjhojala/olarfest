@@ -169,14 +169,19 @@ h2 {
   user-select: none;          /* Likely future */
 }
 
-#rekryIcons .bg {
+#rekryIcons .bg, #someIcons .bg {
   background: rgba(150, 66, 119, 1);
   border-radius: 100%;
   width: 200px;
   height: 200px;
   display: inline-block;
   vertical-align: middle;
-  border: 3px solid rgb(200, 80, 120);
+  /*border: 3px solid rgb(200, 80, 120);*/
+}
+
+#someIcons .bg {
+  width: 100%;
+  height: auto;
 }
 
 #rekryIcons h3 {
@@ -319,6 +324,10 @@ h2 {
     width: 17%;
     margin: 3%;
   }
+  #someIcons .block .bg {
+    width: 100%;
+    height: auto;
+  }
   #someIcons .block img {
     width: 100%;
   }
@@ -333,7 +342,11 @@ h2 {
     width: 110px;
     margin: 15px;
   }
-  #rekryIcons .block img {
+  #rekryIcons .block .bg {
+    width: 90px;
+    height: 90px;
+  }
+  #rekryIcons .block .bg img {
     width: 90px;
   }
   #rekryIcons h3 {
