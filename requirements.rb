@@ -1,5 +1,3 @@
 require 'sinatra'
 require 'sinatra/content_for'
-require 'uglifier'
-require 'sass'
-require 'jquery'
+require 'sinatra/cache'

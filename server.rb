@@ -2,6 +2,8 @@ require_relative 'requirements'
 
 class OlarFest < Sinatra::Base
 	helpers Sinatra::ContentFor
+	register Sinatra::Cache
+	set :cache_enabled, true
 	
 	get '/' do
 		@rekryType = nil
