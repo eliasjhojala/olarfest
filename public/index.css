@@ -241,11 +241,31 @@ h2 {
   display: none;
 }
 
+#bottomBar {
+  float: bottom;
+  background: rgba(5, 23, 60, 1);
+  color:white;
+  padding-bottom: 20px;
+  padding-top: 1px;
+}
+
+#contact {
+  width: 70%;
+  margin-left: auto;
+  margin-right: auto;
+}
+
 .donors span {
   font-family: Ubuntu;
   display: inline-block;
   vertical-align: middle;
   color :rgb(50, 50, 50);
+}
+
+#sponsorit img {
+  width: 30%;
+  margin-bottom: 30px;
+  vertical-align: middle;
 }
 
 @media screen and (max-width: 24cm) {
@@ -324,4 +344,10 @@ h2 {
     display: none;
   }
   
+  #contact {
+    width: calc(100% - 2 * 20px);
+    margin-left: 0px;
+    margin-right: 0px;
+    padding: 20px;
+  }
 }
