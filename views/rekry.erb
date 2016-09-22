@@ -12,10 +12,10 @@ ja ole yksi syksyn parhaimman tapahtuman järjestäjistä! Tarjolla on paikkoja 
   <%
     [
       ["Markkinointi", "markkinointi.png", "markkinointi"],
-      ["Rahoitus", "budjetointi.png", "rahoitus"],
+      ["Rahoitus", "rahoitus.png", "rahoitus"],
       ["Rekrytointi", "rekrytointi.png", "rekrytointi"],
       ["Turvallisuus", "turvallisuus.png", "turvallisuus"],
-      ["Toimisto", "paperwork.png", "toimisto"],
+      ["Toimisto", "toimisto.png", "toimisto"],
       ["Catering", "catering.png", "catering"],
       ["Kuvaus", "kuvaus.png", "kuvaus"],
       ["Tekniikka", "tekniikka.png", "tekniikka"],
@@ -23,7 +23,9 @@ ja ole yksi syksyn parhaimman tapahtuman järjestäjistä! Tarjolla on paikkoja 
     <a class="block open-popup" href
       data-popup-url="/rekry/<%= description %>"
       data-title="<%= name %>">
-      <img src="<%= "/rekry_icons/#{address}" %>">
+      <div class="bg">
+      <img src="<%= "/rekry_icons_2/#{address}" %>">
+      </div>
       <h3><%= name %></h3>
       <h5></h5>
     </a>
