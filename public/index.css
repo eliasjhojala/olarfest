@@ -70,6 +70,16 @@
   color: rgb(50, 50, 50);
 }
 
+.contentElement {
+  margin-top: 50px;
+}
+
+.contentElement h2 {
+  margin-top: 28px;
+  margin-bottom: 23px;
+  margin-left: -2px;
+}
+
 #description {
   width: 70%;
   margin-left: auto;
@@ -99,10 +109,7 @@
 
 
 #rekryTitle {
-  margin-top: 70px;
-  margin-bottom: 10px;
   font-size: 50px;
-//  font-weight: bold;
   text-align: left;
   color: rgb(50, 50, 50);
 }
@@ -289,6 +296,9 @@ h2 {
 }
 
 @media screen and (max-width: 24cm) {
+
+  
+  
   #description {
     width: calc(100% - 2 * 20px);
     margin-left: 0px;
@@ -303,7 +313,6 @@ h2 {
   }
   #rekryTitle {
     font-size: 30px;
-    margin-top: 30px;
   }
   
   #someIcons {
@@ -382,5 +391,16 @@ h2 {
     margin-left: 0px;
     margin-right: 0px;
     padding: 20px;
+  }
+  
+  
+  .contentElement {
+    margin-top: 50px;
+  }
+
+  .contentElement h2 {
+    margin-top: 10px;
+    margin-bottom: 10px;
+    margin-left: 2px;
   }
 }
