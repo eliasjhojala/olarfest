@@ -15,7 +15,7 @@ html {
 body {
   margin: 0px;
   padding: 0px;
-  background-image: url(texture.jpg);
+  background-image: url(/assets/media/texture.jpg);
   overflow-x: hidden;
 }
 

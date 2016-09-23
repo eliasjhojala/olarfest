@@ -1,6 +1,6 @@
 <% content_for :includes do %>
-    <link rel="stylesheet" type="text/css" href="/index.css">
-    <script src="/index.js"></script>
+    <link rel="stylesheet" type="text/css" href="/assets/css/index.css">
+    <script src="/assets/js/index.js"></script>
 <% end %>
 
 <%= erb :teaser %>
@@ -9,14 +9,14 @@
 
 <div id="siteContent">
   
-  <%= erb :description %>
-  <%= erb :some_icons %>
-  <%= erb :yleiso %>
-  <%= erb :rekry %>
-  <%= erb :olarfest_ry %>
+  <%= erb :'/contentElements/description' %>
+  <%= erb :'/contentElements/some_icons' %>
+  <%= erb :'/contentElements/yleiso' %>
+  <%= erb :'/contentElements/rekry' %>
+  <%= erb :'/contentElements/olarfest_ry' %>
   
-  <%= erb :lahjoita %>
-  <%= erb :lahjoitukset_ja_sponsorit %>
+  <%= erb :'/contentElements/lahjoita' %>
+  <%= erb :'/contentElements/lahjoitukset_ja_sponsorit' %>
 
 </div>
 

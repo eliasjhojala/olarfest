@@ -8,11 +8,11 @@ function smallDisplay() {
 
 $(function() {
   if ($(window).width() > 800) {
-      $('#teaserVideo').html('<source src="teaser.mp4" type="video/mp4">');
+      $('#teaserVideo').html('<source src="/assets/media/teasers/teaser.mp4" type="video/mp4">');
   } else if ($(window).width() > 600) {
-      $('#teaserVideo').html('<source src="teaser_LowRes.mp4" type="video/mp4">');
+      $('#teaserVideo').html('<source src="/assets/media/teasers/teaser_LowRes.mp4" type="video/mp4">');
   } else {
-      $('#teaserVideo').html('<source src="teaser_LowRes2.mp4" type="video/mp4">');
+      $('#teaserVideo').html('<source src="/assets/media/teasers/teaser_LowRes2.mp4" type="video/mp4">');
   }
   
   linkBarAlpha.init();
