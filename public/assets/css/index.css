@@ -76,7 +76,7 @@ h2 {
   min-height: 100%;
   margin-top: 0px;
   padding: 50px;
-  padding-top: 30px;
+  padding-top: 20px;
 }
 
 #siteDescription {
@@ -123,6 +123,7 @@ h2 {
 #rekryIcons {
   text-align: center;
   margin-top: -20px;
+  margin-bottom: 40px;
 }
 
 #rekryIcons .block {
@@ -245,10 +246,7 @@ h2 {
 }
 
 @media screen and (max-width: 24cm) {
-  
-  #siteContent {
-    font-size: 19px;
-  }
+
   
   #siteContent, #siteSubject, #contact {
     width: calc(100% - 2 * 20px);
@@ -258,11 +256,12 @@ h2 {
   #siteContent, #contact {
     margin-left: 0px;
     margin-right: 0px;
-  }
-  
-  #siteContent {
-    padding: 20px;
-  }
+}
+
+#siteContent {
+  font-size: 19px;
+  padding-top: 0px;
+}
   
   #siteSubject {
     font-size: 40px;
@@ -285,6 +284,7 @@ h2 {
   }
   #rekryIcons {
     margin-top: -5px;
+    margin-bottom: 20px;
   }
   #rekryIcons .block {
     width: 110px;
