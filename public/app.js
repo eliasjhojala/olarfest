@@ -2,13 +2,13 @@ var hashEnd = "_";
 
 function scrollToElement(elementName) {
   var scrollTop    = $('body').scrollTop(),
-    elementOffset  = $(elementName).offset().top - 100,
+    elementOffset  = $(elementName).offset().top - $('#linkbar').outerHeight() * 1.4,
     distance       = (elementOffset - scrollTop);
     
     distance = Math.min(Math.abs( distance ), 1500);
     
   $('html, body').animate({
-    scrollTop: $(elementName).offset().top - 100
+    scrollTop: $(elementName).offset().top - $('#linkbar').outerHeight() * 1.4
   }, distance);
 }
 
