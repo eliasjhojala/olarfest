@@ -265,6 +265,10 @@ h2 {
 }
 
 @media screen and (max-width: 24cm) {
+  
+  #description {
+    font-size: 18px;
+  }
 
   
   #description, #siteSubject, #contact {
