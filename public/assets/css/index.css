@@ -76,6 +76,7 @@ h2 {
   min-height: 100%;
   margin-top: 0px;
   padding: 50px;
+  padding-top: 30px;
 }
 
 #siteDescription {
@@ -121,14 +122,14 @@ h2 {
 
 #rekryIcons {
   text-align: center;
-  margin: 50px auto;
+  margin-top: -20px;
 }
 
 #rekryIcons .block {
   display: inline-block;
   vertical-align: top;
   width: 250px;
-  margin: 0 20px;
+  margin-top: 40px;
 }
 
 
@@ -152,7 +153,7 @@ h2 {
   letter-spacing: 0.5px;
   margin-bottom: 0px;
   color: rgba(150, 66, 119, 1);
-  margin-top: 18px;
+  margin-top: 17px;
   letter-spacing: 1.3px;
 }
 
@@ -282,16 +283,22 @@ h2 {
     margin-top: 15px;
     margin-bottom: 0px;
   }
+  #rekryIcons {
+    margin-top: -5px;
+  }
   #rekryIcons .block {
     width: 110px;
-    margin: 15px;
+    margin: 10px;
+    margin-top: 20px;
   }
   #rekryIcons .block img {
     width: 90px;
     height: 90px;
   }
   #rekryIcons h3 {
+    margin-top: 10px;
     font-size: 18px;
+    letter-spacing: 0.3px;
   }
 
   
