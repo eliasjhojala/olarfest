@@ -68,7 +68,7 @@ h2 {
   color: rgb(50, 50, 50);
 }
 
-#description {
+#siteContent {
   width: 70%;
   margin-left: auto;
   margin-right: auto;
@@ -78,11 +78,14 @@ h2 {
   padding: 50px;
 }
 
+#siteDescription {
+  margin-bottom: 2em;
+}
+
 
 #yleiso a {
   color: inherit;
 }
-
 
 
 #someIcons {
@@ -114,7 +117,6 @@ h2 {
 #rekryIcons .block img {
   width: 200px;
 }
-
 
 
 #rekryIcons {
@@ -243,21 +245,21 @@ h2 {
 
 @media screen and (max-width: 24cm) {
   
-  #description {
+  #siteContent {
     font-size: 19px;
   }
   
-  #description, #siteSubject, #contact {
+  #siteContent, #siteSubject, #contact {
     width: calc(100% - 2 * 20px);
     padding: 20px;
   }
   
-  #description, #contact {
+  #siteContent, #contact {
     margin-left: 0px;
     margin-right: 0px;
   }
   
-  #description {
+  #siteContent {
     padding: 20px;
   }
   

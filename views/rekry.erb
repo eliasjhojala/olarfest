@@ -1,36 +1,36 @@
-<div id="rekryTitle" class="contentElement">
+<div id="rekry" class="contentElement">
   <h2>Tekijäksi</h2>
-</div>
 
-Jos olet kiinnostunut tapahtuman järjestämisestä,
-<b><a href="#contact">ota yhteyttä </a></b>
-ja ole yksi syksyn parhaimman tapahtuman järjestäjistä! Tarjolla on paikkoja tekijätasosta johtotehtäviin. Tapahtuma tehdään enimmäkseen vapaaehtoisvoimin, joten palkkaa emme voi tarjota. Saat kuitenkin etuja ja mittaamattoman arvokasta kokemusta.
-<br><br>
-<h2 style="text-align: center;">Osa-alueet</h2>
+  Jos olet kiinnostunut tapahtuman järjestämisestä,
+  <b><a href="#contact">ota yhteyttä </a></b>
+  ja ole yksi syksyn parhaimman tapahtuman järjestäjistä! Tarjolla on paikkoja tekijätasosta johtotehtäviin. Tapahtuma tehdään enimmäkseen vapaaehtoisvoimin, joten palkkaa emme voi tarjota. Saat kuitenkin etuja ja mittaamattoman arvokasta kokemusta.
+  <br><br>
+  <h2 style="text-align: center;">Osa-alueet</h2>
 
-<div id="rekryIcons">
-  <%
-    [
-      ["Markkinointi", "markkinointi.png", "markkinointi"],
-      ["Rahoitus", "rahoitus.png", "rahoitus"],
-      ["Rekrytointi", "rekrytointi.png", "rekrytointi"],
-      ["Turvallisuus", "turvallisuus.png", "turvallisuus"],
-      ["Toimisto", "toimisto.png", "toimisto"],
-      ["Catering", "catering.png", "catering"],
-      ["Kuvaus", "kuvaus.png", "kuvaus"],
-      ["Tekniikka", "tekniikka.png", "tekniikka"],
-    ].each do |name, address, description| %>
-    <a class="block open-popup" href
-      data-popup-url="/rekry/<%= description %>"
-      data-title="<%= name %>">
-      <div class="bg">
-      <img src="<%= "/rekry_icons_2/#{address}" %>">
-      </div>
-      <h3><%= name %></h3>
-      <h5></h5>
-    </a>
-  <% end %>
-  
-  
+  <div id="rekryIcons">
+    <%
+      [
+        ["Markkinointi", "markkinointi.png", "markkinointi"],
+        ["Rahoitus", "rahoitus.png", "rahoitus"],
+        ["Rekrytointi", "rekrytointi.png", "rekrytointi"],
+        ["Turvallisuus", "turvallisuus.png", "turvallisuus"],
+        ["Toimisto", "toimisto.png", "toimisto"],
+        ["Catering", "catering.png", "catering"],
+        ["Kuvaus", "kuvaus.png", "kuvaus"],
+        ["Tekniikka", "tekniikka.png", "tekniikka"],
+      ].each do |name, address, description| %>
+      <a class="block open-popup" href
+        data-popup-url="/rekry/<%= description %>"
+        data-title="<%= name %>">
+        <div class="bg">
+        <img src="<%= "/rekry_icons_2/#{address}" %>">
+        </div>
+        <h3><%= name %></h3>
+        <h5></h5>
+      </a>
+    <% end %>
+    
+    
+  </div>
+  Jos kiinnostuit tai kysymyksiä heräsi, ota yhteyttä <a href="#contact">toimistoon</a>.
 </div>
-Jos kiinnostuit tai kysymyksiä heräsi, ota yhteyttä <a href="#contact">toimistoon</a>.
