@@ -2,13 +2,6 @@
   background-color: black;
 }
 
-#teaser {
-/* background-image: url(teaser.jpg);
-  background-size: 100% 100%;
-  width: 100%;
-  height: 100%; */
-}
-
 #teaserImage {
   width: 100%;
   pointer-events: none;
@@ -18,10 +11,6 @@
   user-select: none;          /* Likely future */
 }
 
-#teaserVideo {
-  width: 100%;
-  
-}
 
 .playButton .circle {
   border-radius: 80px;
@@ -52,14 +41,6 @@
   top: 0.5px;
 }
 
-
-#whiteBar {
-  width:100%;
-  height: 50px;
-  color: rgb(250, 250, 250);
-}
-
-/* google fonts: keyboard_arrow_down */
 
 #siteSubject {
   width: 100%;
@@ -155,13 +136,9 @@ h2 {
   border-radius: 100%;
   display: inline-block;
   vertical-align: middle;
-  /*border: 3px solid rgb(200, 80, 120);*/
+  border: 3px solid rgb(177, 78, 141);
 }
 
-#rekryIcons .bg {
-  width: 200px;
-  height: 200px;
-}
 
 #someIcons .bg {
   width: 100%;
@@ -169,12 +146,12 @@ h2 {
 }
 
 #rekryIcons h3 {
-  color: rgb(60, 60, 60);
   font-size: 25px;
   letter-spacing: 0.5px;
   margin-bottom: 0px;
   color: rgba(150, 66, 119, 1);
   margin-top: 18px;
+  letter-spacing: 1.3px;
 }
 
 #rekryIcons a {
@@ -252,7 +229,7 @@ h2 {
 }
 
 .donors span {
-  font-family: Ubuntu;
+  font-family: 'Ubuntu';
   display: inline-block;
   vertical-align: middle;
   color :rgb(50, 50, 50);
@@ -269,7 +246,6 @@ h2 {
   #description {
     font-size: 19px;
   }
-
   
   #description, #siteSubject, #contact {
     width: calc(100% - 2 * 20px);
@@ -280,34 +256,27 @@ h2 {
     margin-left: 0px;
     margin-right: 0px;
   }
+  
   #description {
     padding: 20px;
   }
+  
   #siteSubject {
     font-size: 40px;
     margin-top: 20px;
   }
 
-  #someIcons {
-    text-align: center;
-    margin-top: 15px;
-    margin-bottom: 0px;
-  }
+
   #someIcons .block {
     width: 17%;
     margin: 3%;
   }
-  #someIcons .block .bg {
+  #someIcons .block .bg, #someIcons .block img {
     width: 100%;
     height: auto;
   }
-  #someIcons .block img {
-    width: 100%;
-  }
   
-  
-  #rekryIcons {
-    text-align: center;
+  #rekryIcons, #someIcons {
     margin-top: 15px;
     margin-bottom: 0px;
   }
@@ -315,28 +284,17 @@ h2 {
     width: 110px;
     margin: 15px;
   }
-  #rekryIcons .block .bg {
+  #rekryIcons .block img {
     width: 90px;
     height: 90px;
   }
-  #rekryIcons .block .bg img {
-    width: 90px;
-  }
   #rekryIcons h3 {
     font-size: 18px;
-    letter-spacing: 0.3px;
-    margin-bottom: 0px;
   }
 
-  #rekryIcons h5 {
-    margin-top: 4px;
-    min-height: 1em;
-    margin-bottom: 25px;
-  }
   
   h2 {
     font-size: 40px;
-    font-weight: normal;
   }
 
   
@@ -359,8 +317,6 @@ h2 {
     height: calc(100% - 40px - 5px - 6px);
   }
 
-  
-  
   .contentElement {
     margin-top: 50px;
   }
@@ -370,4 +326,5 @@ h2 {
     margin-bottom: 10px;
     margin-left: 2px;
   }
+  
 }

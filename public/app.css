@@ -22,9 +22,7 @@ body {
 #linkbar {
   background-color: rgba(26, 66, 119, 0.2);
   text-align: right;
-  padding-right: 40px;
-  padding-top: 20px;
-  padding-bottom: 20px;
+  padding: 20px 40px 20px 0px;
   width: 100%;
   color: white;
   float: right;
@@ -45,37 +43,38 @@ body {
 
 #title {
   top: 0px;
+  left: 0px;
   position: absolute;
-  font-size: 40px;
-  width: 100%;
   text-align: left;
-  margin-left: 40px;
+  margin-left: 30px;
   color: rgb(255, 255, 255);
   text-shadow: 1px 1px 1px rgba(0, 0, 0, 0.2);
-  z-index: -1;
+  z-index: 10;
+  display: inline-block;
 }
 
-#title a {
-  text-decoration: none;
-  color: white;
+#title img {
+  height: 62px;
 }
 
 #menuBox {
   display: none;
 }
 
-
 #menuBoxIcon {
   display: none;
 }
 
 
-@media screen and (max-width: 24cm) {
+@media screen and (max-width: 30cm) {
   #title {
     font-size: 24px;
     margin-left: 15px;
     margin-top: 3px;
     box-shadow: 0px;
+  }
+  #title img {
+    height: 35px;
   }
   #linkbar a {
     margin-right: 8px;
