@@ -12,8 +12,10 @@ $(function() {
       $('#teaserImage').html('<img src="/assets/media/teasers/teaser_still_fullHd.jpg">');
   } else if ($(window).width() > 600) {
       $('#teaserVideo').html('<source src="/assets/media/teasers/teaser_LowRes.mp4" type="video/mp4">');
+      $('#teaserImage').html('<img src="/assets/media/teasers/teaser_still_LowRes.jpg">');
   } else {
       $('#teaserVideo').html('<source src="/assets/media/teasers/teaser_LowRes2.mp4" type="video/mp4">');
+      $('#teaserImage').html('<img src="/assets/media/teasers/teaser_still_LowRes.jpg">');
   }
   
 
