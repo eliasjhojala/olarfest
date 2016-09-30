@@ -15,6 +15,7 @@ $(function() {
       $('#teaserVideo').html('<source src="/assets/media/teasers/teaser_LowRes2.mp4" type="video/mp4">');
   }
   
+
   linkBarAlpha.init();
   popup.init();
   menuBox.init();
