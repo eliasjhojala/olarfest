@@ -9,6 +9,7 @@ function smallDisplay() {
 $(function() {
   if ($(window).width() > 800) {
       $('#teaserVideo').html('<source src="/assets/media/teasers/teaser.mp4" type="video/mp4">');
+      $('#teaserImage').html('<img src="/assets/media/teasers/teaser_still_fullHd.jpg">');
   } else if ($(window).width() > 600) {
       $('#teaserVideo').html('<source src="/assets/media/teasers/teaser_LowRes.mp4" type="video/mp4">');
   } else {
@@ -20,7 +21,13 @@ $(function() {
   popup.init();
   menuBox.init();
   
+  
+  
   $('video').bind("timeupdate", function() {
+    if(this.currentTime >= 10) {
+      $('video').animate({volume: 0}, 1000);
+      $('#teaserImage img').fadeTo(1000, 1);
+    }
     if(this.currentTime >= 11) {
       this.pause();
       $(document).off('touchstart click');

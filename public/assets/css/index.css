@@ -11,6 +11,13 @@
   user-select: none;          /* Likely future */
 }
 
+#teaserImage img {
+  width: 100%;
+  position: absolute;
+  top: 0;
+  opacity: 0;
+}
+
 
 .playButton .circle {
   border-radius: 80px;
@@ -248,6 +255,11 @@ h2 {
 }
 
 @media screen and (max-width: 24cm) {
+  
+  
+  #teaserImage img {
+    top: 40px;
+  }
 
   
   #siteContent, #siteSubject, #contact {
