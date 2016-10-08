@@ -33,7 +33,7 @@ $(function () {
       
       setTimeout(function() {
         $(document).off('touchstart click');
-        var wait = videoIsPlaying ? 3700 : 0;
+        var wait = videoIsPlaying ? 6100 : 0;
         setTimeout(function() {
           scrollToElement(
             window.location.hash.replace(new RegExp(hashEnd + "$"), "")
