@@ -27,6 +27,7 @@ $(function() {
        return false;
    });
   
+  $('video').animate({volume: 0.05}, 1);
   
   $('video').bind("timeupdate", function() {
     if(this.currentTime >= 10) {
