@@ -23,6 +23,9 @@ $(function() {
   popup.init();
   menuBox.init();
   
+   $("video").bind("contextmenu",function(){
+       return false;
+   });
   
   
   $('video').bind("timeupdate", function() {
