@@ -42,7 +42,7 @@ body {
 
 
 #title {
-  top: 7.4px;
+  top: 3px;
   left: 0px;
   position: absolute;
   text-align: left;
@@ -54,7 +54,7 @@ body {
 }
 
 #title img {
-  height: 45px;
+  height: 55px;
 }
 
 #menuBox {
@@ -74,7 +74,7 @@ body {
     box-shadow: 0px;
   }
   #title img {
-    height: 28px;
+    height: 35px;
   }
   #linkbar a {
     margin-right: 8px;
