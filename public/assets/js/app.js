@@ -12,6 +12,12 @@ function scrollToElement(elementName) {
   }, distance);
 }
 
+function scrollToElement(elementName, time) {
+  $('html, body').animate({
+    scrollTop: $(elementName).offset().top - $('#linkbar').outerHeight() * 1.4
+  }, time);
+}
+
 $(function () {
   window.scrollTo(0, 0);
   $('a[href^="#"]').click(function(e) {
@@ -36,7 +42,7 @@ $(function () {
         var wait = videoIsPlaying ? 6100 : 0;
         setTimeout(function() {
           scrollToElement(
-            window.location.hash.replace(new RegExp(hashEnd + "$"), "")
+            window.location.hash.replace(new RegExp(hashEnd + "$"), ""), 2500
           );
         }, wait);
       }, 500);
