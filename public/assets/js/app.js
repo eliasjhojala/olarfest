@@ -12,7 +12,7 @@ function scrollToElement(elementName) {
   }, distance);
 }
 
-function scrollToElement(elementName, time) {
+function scrollToElement_(elementName, time) {
   $('html, body').animate({
     scrollTop: $(elementName).offset().top - $('#linkbar').outerHeight() * 1.4
   }, time);
@@ -39,9 +39,9 @@ $(function () {
       
       setTimeout(function() {
         $(document).off('touchstart click');
-        var wait = videoIsPlaying ? 6100 : 0;
+        var wait = videoIsPlaying ? 6000 : 0;
         setTimeout(function() {
-          scrollToElement(
+          scrollToElement_(
             window.location.hash.replace(new RegExp(hashEnd + "$"), ""), 2500
           );
         }, wait);
