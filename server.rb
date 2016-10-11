@@ -11,6 +11,12 @@ class OlarFest < Sinatra::Base
 		erb :root
 	end
 	
+	get '/rekry' do
+		@rekryType = nil
+		@novideo = nil
+		erb :rekry
+	end
+	
 	get '/novideo' do
 		@novideo = true
 		@rekryType = nil
